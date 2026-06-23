@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package orders;
+
+// The Order Service definition
+service OrderService {
+  // Unary RPC: Send an ID, get back an Order
+  rpc GetOrderDetails (OrderRequest) returns (OrderResponse);
+  // Server-streaming RPC
+  rpc TrackOrder (OrderRequest) returns (stream OrderResponse);
+  // Client-streaming RPC
+  rpc BulkCreateOrders (stream OrderRequest) returns (BulkImportSummary);
+  // Bidirectional-streaming RPC
+  rpc OrderSupportChat (stream ChatMessage) returns (stream ChatResponse);
+}
+
+// The request message containing the order ID
+message OrderRequest {
+  string order_id  = 1;
+  string item_name = 2;
+}
+
+// The response message containing order details
+message OrderResponse {
+  string id        = 1;
+  string item_name = 2;
+  double price     = 3;
+  int32  quantity  = 4;
+  string status    = 5;
+}
+
+message BulkImportSummary {
+  int32  total_processed = 1;
+  bool   success         = 2;
+  string message         = 3;
+}
+
+message ChatMessage {
+  string order_id     = 1;
+  string message_text = 2;
+}
+
+message ChatResponse {
+  string order_id   = 1;
+  string reply_text = 2;
+  string timestamp  = 3;
+}
