@@ -1,4 +1,7 @@
+allure-pytest==2.16.0
+allure-python-commons==2.16.0
 annotated-types==0.7.0
+attrs==26.1.0
 grpcio==1.81.1
 grpcio-tools==1.81.1
 iniconfig==2.3.0

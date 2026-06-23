@@ -25,3 +25,7 @@ __pycache__/
 .LSOverride
 Icon_
 ._*
+
+# allure dirs
+allure-results/
+allure-report/
