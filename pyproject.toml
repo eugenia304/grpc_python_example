@@ -8,3 +8,4 @@ pythonpath = [
     "src",
     "src/generated"
 ]
+addopts = "-v --alluredir=./allure-results --tb=short"

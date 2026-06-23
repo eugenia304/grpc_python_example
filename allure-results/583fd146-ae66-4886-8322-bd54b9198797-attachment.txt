@@ -1,0 +1,7 @@
+[Mock Server] Bidirectional support chat stream opened...
+[Mock Server] Received chat message for Order: ORD-101
+[Mock Server] Received chat message for Order: ORD-102
+[Mock Server] Received chat message for Order: ORD-103
+[Client Test] Received chat response for order: ORD-101
+[Client Test] Received chat response for order: ORD-102
+[Client Test] Received chat response for order: ORD-103

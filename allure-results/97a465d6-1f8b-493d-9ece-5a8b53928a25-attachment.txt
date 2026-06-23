@@ -1,0 +1,4 @@
+[Mock Server] Bulk import stream opened by client...
+[Mock Server] Processing imported item: Keyboard
+[Mock Server] Processing imported item: HDMI Cable
+[Mock Server] Processing imported item: Desk Mat
